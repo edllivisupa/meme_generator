@@ -1,0 +1,3 @@
+Add delete button per picture
+Contain picture within div
+Center text, flex box column, space-between
