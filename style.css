@@ -1,0 +1,53 @@
+* {
+    margin: 0%;
+    font-family: Oswald;
+}
+
+html {
+    background-color: black;
+    color: black;
+}
+
+h1, h2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5%;
+}
+
+#body-container {
+    display: flexbox;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-color: white;
+    height: 30vh;
+    border-radius: 25px;
+}
+
+#form-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2.5%;
+}
+
+button {
+    background-color: white;
+    border-radius: 5px;
+    min-width: 50px;
+}
+
+.gallery {
+    display: flexbox;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-color: white;
+    height: 30vh;
+    border-radius: 25px;
+    object-fit: contain;
+    display: inline-block;
+    font-size: 40px;
+}

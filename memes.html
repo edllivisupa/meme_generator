@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edgar's Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="body-container">
+
+        <h1>can i haz memes? </h1>
+        <h2>Edgar's Meme Generator</h2>
+
+        <form id="form-container" action="#">
+
+            <div>
+                <input type="url" placeholder="Your Picture URL" name="piclink" required>
+            </div>
+            <div>
+                <input type="text" placeholder="Top Text" name="toptext" required>
+            </div>
+            <div>
+                <input  type="text" placeholder="Bottom Text" name="bottomtext" required>
+            </div>
+            <button type="submit">Make me a meme</button>
+
+        </form>
+    </div>
+    
+
+    <div class="gallery" id="body-container">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
