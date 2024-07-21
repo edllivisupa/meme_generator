@@ -1,13 +1,16 @@
+/* universal operator to apply font and 0 margin */
 * {
     margin: 0%;
     font-family: Oswald;
 }
 
+/* makes webpage color and text black */
 html {
     background-color: black;
     color: black;
 }
 
+/* centers headers with spacing */
 h1, h2 {
     text-align: center;
     display: flex;
@@ -15,39 +18,70 @@ h1, h2 {
     padding-bottom: 1.5%;
 }
 
-#body-container {
-    display: flexbox;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    background-color: white;
-    height: 30vh;
-    border-radius: 25px;
-}
-
-#form-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2.5%;
-}
-
+/* styles submit button */
 button {
     background-color: white;
     border-radius: 5px;
     min-width: 50px;
 }
 
-.gallery {
+/* styles heading container */
+#heading-container {
     display: flexbox;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     background-color: white;
     height: 30vh;
+    width: 90%;
+    /* makes container rounder */
     border-radius: 25px;
-    object-fit: contain;
-    display: inline-block;
+}
+
+/* styles form with flexbox */
+#form {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2.5%;
+}
+
+/* styles image gallery, with relative position for the other divs to be positioned properly */
+.photo-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    border-radius: 25px;
     font-size: 40px;
+    position: relative;
+    text-align: center;
+}
+
+/* sets width to fit width of parent div */
+.photo-container > img {
+    width: 100%;
+}
+
+/* styles captions to center, spaced and with white text */
+.top-caption {
+    position: absolute;
+    text-align: center;
+    top : 8px;
+    width: 100%;
+    color: white;
+}
+
+.bottom-caption {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom : 8px;
+    color: white;
+}
+
+/* attached button to bottom-right corner of img */
+.photo-container > button {
+    position: absolute;
+    bottom: 20px;
+    left: 90%;
 }

@@ -4,38 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edgar's Meme Generator</title>
+    <!-- attached stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- links to external Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="body-container">
 
+    <!-- contains page title, subtitle and form -->
+    <div id="heading-container">
+
+        <!-- page title -->
         <h1>can i haz memes? </h1>
+
+        <!-- page subtitle -->
         <h2>Edgar's Meme Generator</h2>
 
-        <form id="form-container" action="#">
+        <!-- form to submit image url, top and bottom caption, and button. All forms required -->
+        <form id="form" action="#">
 
             <div>
                 <input type="url" placeholder="Your Picture URL" name="piclink" required>
             </div>
             <div>
-                <input type="text" placeholder="Top Text" name="toptext" required>
+                <input type="text" placeholder="Top Caption" name="topcaption" required>
             </div>
             <div>
-                <input  type="text" placeholder="Bottom Text" name="bottomtext" required>
+                <input  type="text" placeholder="Bottom Caption" name="bottomcaption" required>
             </div>
             <button type="submit">Make me a meme</button>
 
         </form>
     </div>
     
-
-    <div class="gallery" id="body-container">
-
+    <!-- memes will be appended below -->
+    <div class="gallery">
     </div>
 
+    <!-- js file will load last -->
     <script src="script.js"></script>
 </body>
 </html>

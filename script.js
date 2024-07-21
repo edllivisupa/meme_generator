@@ -1,9 +1,11 @@
 //assigns variables to collect info from form
-let topText = document.querySelector('input[name="toptext"]');
-let bottomText = document.querySelector('input[name="bottomtext"]');
+let topCaption = document.querySelector('input[name="topcaption"]');
+let bottomCaption = document.querySelector('input[name="bottomcaption"]');
 let photo = document.querySelector('input[name="piclink"]');
-//assigns variable for button
+
+//assigns submit variable when form is submitted
 let submit = document.querySelector('button');
+
 //assigns variable for gallery section to display images
 let gallery = document.querySelector(".gallery");
 
@@ -12,28 +14,39 @@ submit.addEventListener('click', function(e) {
     //prevents from page refreshing
     e.preventDefault();
     
-    //creates new div and img
-    let divTopText = document.createElement('div');
-    let divBottomText = document.createElement('div');
+    //creates new img, button, and caption and image divs
+    let photoContainer = document.createElement('div');
+    let divTopCaption = document.createElement('div');
+    let divBottomCaption = document.createElement('div');
     let img = document.createElement('img');
-    
-    //displays img from url input
+    let newDeleteButton = document.createElement("button");
+
+    //Adds text and photo url to created elements
+    newDeleteButton.innerText = "Delete";
+    divTopCaption.innerText = topCaption.value;
+    divBottomCaption.innerText = bottomCaption.value;
     img.setAttribute('src', photo.value); 
-    
-    //test to ensure that text input works
 
-    divTopText.innerText = topText.value;
-    divBottomText.innerText = bottomText.value;
+    //appends created caption and photo divs to photo container and adds class for styling
+    divTopCaption.classList.add("top-caption");
+    divBottomCaption.classList.add("bottom-caption");
+    photoContainer.classList.add("photo-container");
+    photoContainer.appendChild(divTopCaption);
+    photoContainer.appendChild(divBottomCaption);
+    photoContainer.append(newDeleteButton);
 
-    //appends new text divs to gallery
-    gallery.appendChild(divTopText);
-    gallery.appendChild(divBottomText);
-
-    //append new image to new div
-    gallery.appendChild(img);
+    //append new image to photo div and attached to gallery div
+    photoContainer.appendChild(img);
+    gallery.appendChild(photoContainer);
 
     //resets the form fields
     photo.value = '';
-    topText.value = '';
-    bottomText.value = '';
+    topCaption.value = '';
+    bottomCaption.value = '';
+
+     //listener event whe 'Delete' is clicked, removes parent element
+    //must use event delegation to ensure all to-dos are deleted
+    newDeleteButton.addEventListener("click", function(event) {
+        event.target.parentElement.remove();
+    });
 })
